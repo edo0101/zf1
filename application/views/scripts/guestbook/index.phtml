@@ -1,0 +1,18 @@
+<!-- application/views/scripts/guestbook/index.phtml -->
+ 
+<p><a href="<?php echo $this->url(
+    array(
+        'controller' => 'guestbook',
+        'action'     => 'sign'
+    ),
+    'default',true) ?>">Sign Our Guestbook</a></p>
+ 
+Guestbook Entries: <br />
+<dl>
+    <?php foreach ($this->entries as $entry): ?>
+    <dt> <a href="http://www.php.net/echo"><?php echo $this->escape($entry->email) ?></a> </dt>
+    <dd> <a href="http://www.php.net/echo"><?php echo $this->escape($entry->comment) ?></a> </dd>
+    <?php endforeach ?>
+</dl>
+
+<!--?php endforeach ?--><br>
